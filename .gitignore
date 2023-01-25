@@ -132,3 +132,9 @@ dmypy.json
 .vscode/
 # exclude the logfiles
 /logs/*.txt
+models/satyaalmasian/temporal_tagger_BERT_tokenclassifier/config.json
+models/satyaalmasian/temporal_tagger_BERT_tokenclassifier/pytorch_model.bin
+models/satyaalmasian/temporal_tagger_BERT_tokenclassifier/special_tokens_map.json
+models/satyaalmasian/temporal_tagger_BERT_tokenclassifier/tokenizer_config.json
+models/satyaalmasian/temporal_tagger_BERT_tokenclassifier/tokenizer.json
+models/satyaalmasian/temporal_tagger_BERT_tokenclassifier/vocab.txt

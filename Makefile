@@ -13,14 +13,14 @@ test:
 	python -m pytest tests/*.py
 build:
 	# build the container
-	docker build -t image-name .
+	docker build -t text_temporal .
 run:
 	# deploy the code
 	docker run \
-		--rm -d -p 8080:8080 \
-		--name container-name \
+		--rm -d -p 8010:8010 \
+		--name text_temporal \
 		-e CONTAINER_NAME \
-		--env CONTAINER_NAME="container-name" \
+		--env CONTAINER_NAME="text_temporal" \
 		--env-file .env \
 		# use docker volumes to persit data from multiple containers
 		-v text_data_vol:/app/data \
@@ -29,6 +29,6 @@ run:
 deploy:
 	# customise to the cloud provider
 	# docker login
-	# docker tag image-name svgcant2022/text_ms:image-name
+	# docker tag image-name svgcant2022/text_ms:text_temporal
 
 all: install format lint test build run deploy
