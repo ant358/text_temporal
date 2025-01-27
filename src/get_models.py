@@ -4,12 +4,12 @@ import os
 from transformers import AutoTokenizer, AutoModelForTokenClassification
 
 
-def get_ner_tokenizer():
+def get_temporal_tokenizer():
     return AutoTokenizer.from_pretrained(
         "satyaalmasian/temporal_tagger_BERT_tokenclassifier")
 
 
-def get_ner_model():
+def get_temporal_model():
     return AutoModelForTokenClassification.from_pretrained(
         "satyaalmasian/temporal_tagger_BERT_tokenclassifier")
 
@@ -25,8 +25,8 @@ if __name__ == "__main__":
     # check to see if the model is already saved
     if not os.path.exists(
             "../models/satyaalmasian/temporal_tagger_BERT_tokenclassifier"):
-        model = get_ner_model()
-        tokenizer = get_ner_tokenizer()
+        model = get_temporal_model()
+        tokenizer = get_temporal_tokenizer()
         save_model(
             model, tokenizer,
             "../models/satyaalmasian/temporal_tagger_BERT_tokenclassifier")
